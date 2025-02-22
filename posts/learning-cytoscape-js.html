@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Cytoscape.js</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.24.0/cytoscape.min.js"></script>
     <style>
         body { font-family: Arial, sans-serif; background: #f4f4f4; text-align: center; padding: 20px; }
         .container { background: white; padding: 20px; border-radius: 5px; display: inline-block; width: 80%; text-align: left; }
         h1 { color: #333; text-align: center; }
-        pre { background: #222; color: #fff; padding: 10px; border-radius: 5px; text-align: left; overflow-x: auto; }
+        pre { background: #222; color: #fff; padding: 10px; border-radius: 5px; text-align: left; }
         .explanation { background: #e3f2fd; padding: 10px; border-left: 5px solid #2196F3; margin-top: 10px; }
-        #cy { width: 100%; height: 500px; border: 1px solid black; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -19,82 +17,46 @@
         <h1>Learning Cytoscape.js</h1>
         <h3>- By Group J048</h3>
 
-        <h2>Code Example</h2>
-        <h3>Basic Cytoscape.js Graph</h3>
+        <h2>Introduction</h2>
+        <p>(Paste the introduction content here.)</p>
+
+        <h2>Installation & Setup</h2>
+        <p>(Paste installation steps here.)</p>
+
+        <h2>Key Features & Explanation</h2>
+        <p>(Paste features and descriptions here.)</p>
+
+        <h2>Code Examples</h2>
+
+        <h3>Example 1: (Title of the Example)</h3>
         <pre>
-        &lt;div id="cy"&gt;&lt;/div&gt;
-        &lt;script&gt;
-        let cy = cytoscape({
-            container: document.getElementById('cy'),
-            elements: [
-                { data: { id: 'A', label: 'Node A' } },
-                { data: { id: 'B', label: 'Node B' } },
-                { data: { id: 'C', label: 'Node C' } },
-                { data: { id: 'D', label: 'Node D' } },
-                { data: { id: 'E', label: 'Node E' } },
-                { data: { id: 'AB', source: 'A', target: 'B' } },
-                { data: { id: 'BC', source: 'B', target: 'C' } },
-                { data: { id: 'CD', source: 'C', target: 'D' } },
-                { data: { id: 'DE', source: 'D', target: 'E' } },
-                { data: { id: 'EA', source: 'E', target: 'A' } }
-            ],
-            style: [
-                { selector: 'node', style: { 'background-color': '#007bff', 'label': 'data(label)', 'text-valign': 'center', 'color': 'white' } },
-                { selector: 'edge', style: { 'line-color': '#999', 'width': 2, 'curve-style': 'bezier' } },
-                { selector: '.highlighted', style: { 'background-color': 'yellow' } }
-            ],
-            layout: { name: 'breadthfirst' }
-        });
-        
-        cy.on('tap', 'node', function(evt) {
-            let node = evt.target;
-            cy.elements().removeClass('highlighted');
-            node.addClass('highlighted');
-        });
-        &lt;/script&gt;
+        (Paste code snippet here)
         </pre>
         <div class="explanation">
-            <p>This example initializes a simple graph with 5 nodes and 5 edges. Clicking on a node highlights it.</p>
+            <p>(Paste explanation of the code here.)</p>
         </div>
 
-        <h2>Visualization</h2>
-        <div id="cy"></div>
+        <h3>Example 2: (Title of the Example)</h3>
+        <pre>
+        (Paste another code snippet here)
+        </pre>
+        <div class="explanation">
+            <p>(Paste explanation of the code here.)</p>
+        </div>
+
+        <h2>Screenshots</h2>
+        <p>(Add image links or screenshots here.)</p>
+
+        <h2>Use Cases</h2>
+        <p>(Describe real-world applications here.)</p>
 
         <h2>Conclusion</h2>
-        <p>This was a basic example of using Cytoscape.js for interactive graph visualization.</p>
+        <p>(Write the summary here.)</p>
+
+        <h2>References & Further Reading</h2>
+        <p>(List sources and links here.)</p>
 
         <p><a href="../blog.html">Back to Blog</a></p>
     </div>
-
-    <script>
-        let cy = cytoscape({
-            container: document.getElementById('cy'),
-            elements: [
-                { data: { id: 'A', label: 'Node A' } },
-                { data: { id: 'B', label: 'Node B' } },
-                { data: { id: 'C', label: 'Node C' } },
-                { data: { id: 'D', label: 'Node D' } },
-                { data: { id: 'E', label: 'Node E' } },
-                { data: { id: 'AB', source: 'A', target: 'B' } },
-                { data: { id: 'BC', source: 'B', target: 'C' } },
-                { data: { id: 'CD', source: 'C', target: 'D' } },
-                { data: { id: 'DE', source: 'D', target: 'E' } },
-                { data: { id: 'EA', source: 'E', target: 'A' } }
-            ],
-            style: [
-                { selector: 'node', style: { 'background-color': '#007bff', 'label': 'data(label)', 'text-valign': 'center', 'color': 'white' } },
-                { selector: 'edge', style: { 'line-color': '#999', 'width': 2, 'curve-style': 'bezier' } },
-                { selector: '.highlighted', style: { 'background-color': 'yellow' } }
-            ],
-            layout: { name: 'breadthfirst' }
-        });
-        
-        cy.on('tap', 'node', function(evt) {
-            let node = evt.target;
-            cy.elements().removeClass('highlighted');
-            node.addClass('highlighted');
-        });
-    </script>
 </body>
 </html>
-
